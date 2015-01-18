@@ -2,7 +2,7 @@
 <h2><?php echo ($action =='add_pdfpage') ? "Add PDF Page" : "Edit PDF Page" ?></h2>
 <?php if(isset($_GET['error'])) : ?>
 	<p style="color:red"><?php echo $_GET['error']; ?></p>
-		
+
 <?php endif; ?>
 
 <form enctype="multipart/form-data" method="post" action="<?php echo admin_url()?>admin-post.php">
@@ -74,7 +74,7 @@
 						<span class="icon"></span>
 						<input type="checkbox" name="fb" <?php echo ($social && $social['fb']) ? 'checked="checked"': '' ?>>
 					</a>
-					
+
 					<a class="gplus" href="#">
 						<span class="icon"></span>
 						<input type="checkbox" name="gplus" <?php echo ($social && $social['gplus']) ? 'checked="checked"': '' ?>>
@@ -123,41 +123,9 @@
 		</tr>
 	</tbody>
 </table>
-<h2>Extend Options</h2>
-<table class="form-table admin_social_set">
-	<tbody>
-		<tr valign="top">
-			<th scope="row">
-				<label for="pdf_file">Bar Color</label>
-			</th>
-			<td>
-				<input type="text"  value="<?php echo ($bar_color) ? $bar_color : "#ffffff"?>" name="bar_color" class="color-field" data-default-color="#ffffff" />
-			</td>
-		</tr>
-		<tr valign="top">
-			<th scope="row">
-				<label for="bar_text">Bar Text</label>
-			</th>
-			<td>
-				<input type="text" name="bar_text" value="<?php echo $bar_text; ?>"><br>
-				<p class="description">
-					Put text on  it's own line <input type="checkbox" value="1" name="textline" <?php echo ($textline) ? 'checked="checked"': '' ?>>
-				</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<th scope="row">
-				<label for="text_color">Text Color</label>
-			</th>
-			<td>
-				<input type="text" value="<?php echo ($text_color) ? $text_color : "#000000"?>" name="text_color" class="color-field" data-default-color="#000000" />
-			</td>
-		</tr>
-	</tbody>
-</table>
 <h2>CTA Buttons</h2>
 <table class="form-table admin_social_set">
-	<tbody>	
+	<tbody>
 		<tr valign="top">
 			<th scope="row">
 				<label for="button_1">Button 1</label>
@@ -220,11 +188,44 @@
 			</th>
 			<td>
 				<input type="text" value="<?php echo ($button_2_color) ? $button_2_color : "#49afcd"?>" name="button_2_color" class="color-field" data-default-color="#49afcd" />
-			
+
 			</td>
 		</tr>
 	</tbody>
 </table>
+<h2>Extend Options</h2>
+<table class="form-table admin_social_set">
+	<tbody>
+		<tr valign="top">
+			<th scope="row">
+				<label for="pdf_file">Bar Color</label>
+			</th>
+			<td>
+				<input type="text"  value="<?php echo ($bar_color) ? $bar_color : "#ffffff"?>" name="bar_color" class="color-field" data-default-color="#ffffff" />
+			</td>
+		</tr>
+		<tr valign="top">
+			<th scope="row">
+				<label for="bar_text">Bar Text</label>
+			</th>
+			<td>
+				<input type="text" name="bar_text" value="<?php echo $bar_text; ?>"><br>
+				<p class="description">
+					Put text on  it's own line <input type="checkbox" value="1" name="textline" <?php echo ($textline) ? 'checked="checked"': '' ?>>
+				</p>
+			</td>
+		</tr>
+		<tr valign="top">
+			<th scope="row">
+				<label for="text_color">Text Color</label>
+			</th>
+			<td>
+				<input type="text" value="<?php echo ($text_color) ? $text_color : "#000000"?>" name="text_color" class="color-field" data-default-color="#000000" />
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 <h2>Add Form To Bar <input type="checkbox" name="form" class="button_enable" <?php echo ($form) ? 'checked="checked"': '' ?>></h2>
 <table class="form-table admin_social_set">
 	<tbody>
@@ -257,10 +258,10 @@
 				$('.'+name+'_tr').show();
 			}
 		});
-		
+
 		$('.button_enable').on('click',function() {
 			var name = $(this).attr('name');
-			
+
 			if ($(this).attr("checked")) {
 				$('.'+name+'_tr input, .'+name+'_tr textarea').removeAttr('disabled');
 				$('.'+name+'_tr').show();
@@ -270,31 +271,31 @@
 				$('.'+name+'_tr').hide();
 			}
 		});
-		
+
 		$('.social_share > a').on('click',function(e) {
-			if( $(e.target).prop("tagName") == 'INPUT' ) 
+			if( $(e.target).prop("tagName") == 'INPUT' )
 				return;
-			
+
 			e.preventDefault();
 			var name = $(this).attr('class');
 			$input = $(this).find('input').click();
-			
+
 		});
-		
+
 		$('#save_author').click(function(){
 			var name = $('[name="twitter_account"]').val();
 			jQuery.post(
-				ajaxurl, 
+				ajaxurl,
 				{
 					'action': 'save_author',
 					'twit_author':   name
-				}, 
+				},
 				function(response){
 					alert(response);
 				}
 			);
 		})
-		
+
 		 $('.color-field').wpColorPicker();
 	});
 </script>
