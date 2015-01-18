@@ -9,14 +9,14 @@
 	<meta itemprop="name" content="<?php the_title( ); ?>">
 	<meta itemprop="description" content="<?php echo $page_data->sh_text;?>">
 	<meta itemprop="image" content="">
-	
+
 	<!-- Twitter Card data -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="<?php echo get_option('twitter_author');?>">
 	<meta name="twitter:title" content="<?php the_title( ); ?>">
 	<meta name="twitter:description" content="<?php echo $page_data->sh_text;?>">
 	<meta name="twitter:creator" content="<?php echo get_option('twitter_author');?>">
-	
+
 	<!-- Open Graph data -->
 	<meta property="og:title" content="<?php the_title( ); ?>" />
 	<meta property="og:type" content="article" />
@@ -26,7 +26,7 @@
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
 
 	<title><?php the_title( ); ?></title>
-	
+
 	<?php if(is_user_logged_in()) : ?>
 		<?php $barClass .= " logged"?>
 		<style>
@@ -53,6 +53,11 @@
 			<?php echo stripslashes_deep($page_data->form) ?>
 		</div>
 		<?php endif; ?>
+		<?php if($share->isButtons()) : ?>
+		<div class="share-container" <?php echo $share->getButtonsWidth() ?> >
+			<?php echo $share->getButtons()?>
+		</div>
+		<?php endif; ?>
 		<?php if(!empty($page_data->button_1_link ) || !empty($page_data->button_2_link )) : ?>
 		<div class="extend_buttons">
 			<?php if(!empty($page_data->button_1_link )) : ?>
@@ -63,16 +68,11 @@
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
-		<?php if($share->isButtons()) : ?>
-		<div class="share-container" <?php echo $share->getButtonsWidth() ?> >
-			<?php echo $share->getButtons()?>
-		</div>
-		<?php endif; ?>
 	</div>
 	<div id="pdf_document_wrap" class="<?php echo $document_class?>">
 		<div id="viewerContainer">
 			<div id="viewer" class="pdfViewer">
-			
+
 			</div>
 		</div>
 	</div>
@@ -94,14 +94,14 @@
 		var pdfViewer = new PDFJS.PDFViewer({
 			container: container
 		});
-		
+
 		container.addEventListener('pagesinit', function () {
 			// we can use pdfViewer now, e.g. let's change default scale.
 			pdfViewer.currentScaleValue = 'auto';
 		});
 		window.onresize = function(event) {
 			pdfViewer.setDocument(loadedDocument);
-			
+
 		};
 		// Loading document.
 		PDFJS.getDocument(DEFAULT_URL).then(function (pdfDocument) {
