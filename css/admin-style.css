@@ -1,0 +1,25 @@
+.color_icon {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
+.color_icon.primary {
+	background: #49afcd;
+}
+
+.color_icon.success {
+	background: #5bb75b;
+}
+
+.color_icon.danger {
+	background: #da4f49;
+}
+
+.color_icon.warning {
+	background: #faa732;
+}
+
+.button_2_tr, .button_1_tr, .form_tr {
+	display: none;
+}

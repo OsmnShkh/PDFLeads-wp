@@ -1,0 +1,691 @@
+@charset "utf-8";
+.social_share a.fb span.icon {
+  background-image: url("social/fb.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.social_share a.gplus span.icon {
+  background-image: url("social/gplus.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+
+
+.social_share a.twitter span.icon {
+  background-image: url("social/twitter.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.social_share a.linkedin span.icon {
+  background-image: url("social/linkedin.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+.social_share a.pinterest span.icon {
+  background-image: url("social/pinterest.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+.social_share a.reddit span.icon {
+  background-image: url("social/reddit.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+
+.social_share.flat {
+  display: inline-block;
+}
+
+
+.social_share.flat a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  position: relative;
+  vertical-align: top;
+  width: 30px;
+}
+
+
+.social_share.flat a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+
+
+.social_share.flat a.gplus {
+  background: none repeat scroll 0 0 #DA4735;
+}
+.social_share.flat a.twitter {
+  background: none repeat scroll 0 0 #33b1cb;
+}
+.social_share.flat a.linkedin {
+  background: none repeat scroll 0 0 #1183a6;
+}
+.social_share.flat a.pinterest {
+  background: none repeat scroll 0 0 #CB2028;
+}
+.social_share.flat a.reddit {
+  background: none repeat scroll 0 0 #7ccbff;
+}
+
+
+.social_share.flat span.count {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+  color: #FFFFFF;
+  visibility:hidden;
+  font-size: 10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  transition: all 1s ease 0s;
+  width: 30px;
+}
+
+.social_share.flat a:hover > span.count{
+	visibility:visible;
+	top: -15px;
+	}
+
+
+
+/* ******************************************** */
+
+.social_share.round {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.social_share.round a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  position: relative;
+  vertical-align: top;
+  width: 30px;
+}
+.social_share.round a {
+  border-radius: 50%;
+}
+
+.social_share.round a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+.social_share.round a.gplus {
+  background: none repeat scroll 0 0 #DA4735;
+}
+.social_share.round a.twitter {
+  background: none repeat scroll 0 0 #33b1cb;
+}
+.social_share.round a.linkedin {
+  background: none repeat scroll 0 0 #1183a6;
+}
+.social_share.round a.pinterest {
+  background: none repeat scroll 0 0 #CB2028;
+}
+.social_share.round a.reddit {
+  background: none repeat scroll 0 0 #7ccbff;
+}
+
+
+
+
+.social_share.round span.count {
+  border-radius: 7px;
+  box-shadow: 0 0 4px -1px #999999;
+  color: #000000;
+  font-size: 10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: -30px;
+  width: 25px;
+}
+
+
+
+.social_share.round span.count { background: #fff; border: 1px solid #868686; }
+.social_share.round span.count:after, .social_share.round span.count:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.social_share.round span.count:after { border-color: rgba(255, 255, 255, 0); border-top-color: #fff; border-width: 4px; margin-left: -4px; }
+.social_share.round span.count:before { border-color: rgba(134, 134, 134, 0); border-top-color: #868686; border-width: 5px; margin-left: -5px; }
+
+
+
+.social_share.round a:hover > span.count{
+
+	top: -25px;
+	}
+
+
+
+
+/* ********************************* */
+
+
+
+
+
+.social_share.wide {
+  display: inline-block;
+}
+
+.social_share.wide a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  overflow: hidden;
+  vertical-align: top;
+  width: 80px;
+}
+
+.social_share.wide a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+.social_share.wide a.gplus {
+  background: none repeat scroll 0 0 #DA4735;
+}
+.social_share.wide a.twitter {
+  background: none repeat scroll 0 0 #33b1cb;
+}
+.social_share.wide a.linkedin {
+  background: none repeat scroll 0 0 #1183a6;
+}
+.social_share.wide a.pinterest {
+  background: none repeat scroll 0 0 #CB2028;
+}
+.social_share.wide a.reddit {
+  background: none repeat scroll 0 0 #7ccbff;
+}
+
+.social_share.wide span.count {
+  color: #FFFFFF;
+  display: inline-block;
+  float: right;
+  height: 30px;
+  padding-right: 7px;
+  padding-top: 3px;
+  text-align: right;
+  width: 30px;
+}
+
+
+
+
+/* ********************************* */
+
+
+
+
+
+.social_share.bodyname {
+  display: inline-block;
+}
+
+.social_share.bodyname a {
+  border-radius: 3px;
+  box-shadow: 0 0 3px 0 #999999;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  height: 22px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: all 1s ease 0s;
+  vertical-align: top;
+  width: 100px;
+}
+
+
+
+
+.social_share.bodyname a span {
+  color: #FFFFFF;
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+}
+.social_share.bodyname a span.body {
+  padding-left: 2px;
+  padding-top: 2px;
+}
+.social_share.bodyname a span.count {
+  color: #5f5f5f;
+  float: right;
+  height: 22px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+
+}
+
+
+.social_share.bodyname a.fb {
+  background: url("social/bodyname/fb.png") no-repeat scroll 0 0 #3A589B;
+}
+.social_share.bodyname a.fb span.icon {
+  background: none !important;
+}
+.social_share.bodyname a.gplus {
+  background: url("social/bodyname/gplus.png") no-repeat scroll 0 0 #DA4735;
+}
+.social_share.bodyname a.gplus span.icon {
+  background: none !important;
+}
+.social_share.bodyname a.twitter {
+  background: url("social/bodyname/twitter.png") no-repeat scroll 0 0 #33b1cb;
+}
+.social_share.bodyname a.twitter span.icon {
+  background: none !important;
+}
+.social_share.bodyname a.linkedin {
+  background: url("social/bodyname/linkedin.png") no-repeat scroll 0 0 #1183a6;
+}
+.social_share.bodyname a.linkedin span.icon {
+  background: none !important;
+}
+.social_share.bodyname a.pinterest {
+  background: url("social/bodyname/pinterest.png") no-repeat scroll 0 0 #CB2028;
+}
+.social_share.bodyname a.pinterest span.icon {
+  background: none !important;
+}
+.social_share.bodyname a.reddit {
+  background: url("social/bodyname/reddit.png") no-repeat scroll 0 0 #7ccbff;
+}
+.social_share.bodyname a.reddit span.icon {
+  background: none !important;
+}
+
+
+
+.social_share.bodyname a:hover{
+	width: 130px;
+	}
+.social_share.bodyname a:hover > span.count{
+	color:#fff;
+	}
+
+
+
+/* ********************************* */
+
+
+
+
+
+.social_share.packslide {
+  display: inline-block;
+}
+
+.social_share.packslide a {
+  border-radius: 3px;
+  box-shadow: 0 0 3px 0 #999999;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  height: 22px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+  vertical-align: top;
+  width: 40px;
+}
+
+
+
+
+.social_share.packslide a span {
+  color: #FFFFFF;
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+}
+.social_share.packslide a span.body {
+  padding-left: 2px;
+  padding-top: 2px;
+}
+.social_share.packslide a span.count {
+  color: #5f5f5f;
+  float: right;
+  height: 22px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  visibility:hidden;
+
+}
+
+
+.social_share.packslide a.fb {
+  background: url("social/packslide/fb.png") no-repeat scroll 0 0 #3A589B;
+}
+.social_share.packslide a.fb span.icon {
+  background: none !important;
+}
+.social_share.packslide a.gplus {
+  background: url("social/packslide/gplus.png") no-repeat scroll 0 0 #DA4735;
+}
+.social_share.packslide a.gplus span.icon {
+  background: none !important;
+}
+.social_share.packslide a.twitter {
+  background: url("social/packslide/twitter.png") no-repeat scroll 0 0 #33b1cb;
+}
+.social_share.packslide a.twitter span.icon {
+  background: none !important;
+}
+.social_share.packslide a.linkedin {
+  background: url("social/packslide/linkedin.png") no-repeat scroll 0 0 #1183a6;
+}
+.social_share.packslide a.linkedin span.icon {
+  background: none !important;
+}
+.social_share.packslide a.pinterest {
+  background: url("social/packslide/pinterest.png") no-repeat scroll 0 0 #CB2028;
+}
+.social_share.packslide a.pinterest span.icon {
+  background: none !important;
+}
+.social_share.packslide a.reddit {
+  background: url("social/packslide/reddit.png") no-repeat scroll 0 0 #7ccbff;
+}
+.social_share.packslide a.reddit span.icon {
+  background: none !important;
+}
+
+
+
+.social_share.packslide a:hover{
+	width: 70px;
+	}
+
+
+.social_share.packslide a:hover > span.count{
+	visibility:visible;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************** */
+
+
+
+
+.social_share.hexa {
+  display: inline-block;
+}
+
+
+.social_share.hexa a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  position: relative;
+  vertical-align: top;
+  width: 30px;
+}
+
+
+.social_share.hexa a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+
+
+
+.social_share.hexa a.fb {
+  background: url("social/hexa/fb.png");
+}
+.social_share.hexa a.fb span.icon {
+  background: none !important;
+}
+.social_share.hexa a.gplus {
+  background: url("social/hexa/gplus.png");
+}
+.social_share.hexa a.gplus span.icon {
+  background: none !important;
+}
+.social_share.hexa a.twitter {
+  background: url("social/hexa/twitter.png");
+}
+.social_share.hexa a.twitter span.icon {
+  background: none !important;
+}
+.social_share.hexa a.linkedin {
+  background: url("social/hexa/linkedin.png");
+}
+.social_share.hexa a.linkedin span.icon {
+  background: none !important;
+}
+.social_share.hexa a.pinterest {
+  background: url("social/hexa/pinterest.png");
+}
+.social_share.hexa a.pinterest span.icon {
+  background: none !important;
+}
+.social_share.hexa a.reddit {
+  background: url("social/hexa/reddit.png");
+}
+.social_share.hexa a.reddit span.icon {
+  background: none !important;
+}
+
+
+
+.social_share.hexa span.count {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+  color: #FFFFFF;
+  visibility:hidden;
+  font-size: 10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  transition: all 1s ease 0s;
+  width: 30px;
+}
+
+.social_share.hexa a:hover > span.count{
+	visibility:visible;
+	top: -15px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************hover-left************************** */
+
+
+
+
+.social_share.hover-left {
+  display: inline-block;
+  left: 0;
+  position: fixed;
+  top: 30%;
+}
+
+.social_share.hover-left a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  position: relative;
+  vertical-align: top;
+  width: 30px;
+}
+
+
+.social_share.hover-left a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+
+
+.social_share.hover-left a.gplus {
+  background: none repeat scroll 0 0 #DA4735;
+}
+.social_share.hover-left a.twitter {
+  background: none repeat scroll 0 0 #33b1cb;
+}
+.social_share.hover-left a.linkedin {
+  background: none repeat scroll 0 0 #1183a6;
+}
+.social_share.hover-left a.pinterest {
+  background: none repeat scroll 0 0 #CB2028;
+}
+.social_share.hover-left a.reddit {
+  background: none repeat scroll 0 0 #7ccbff;
+}
+
+
+.social_share.hover-left span.count {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+  color: #FFFFFF;
+  visibility:hidden;
+  font-size: 10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  transition: all 1s ease 0s;
+  width: 30px;
+}
+
+.social_share.hover-left a:hover > span.count{
+	visibility:visible;
+	top: -15px;
+	}
+
+
+
+/* ******************************************** */
+
+
+
+
+
+
+
+
+
+
+
+/* ******************hover-right************************** */
+
+
+
+
+.social_share.hover-right {
+  display: inline-block;
+  right: 0;
+  position: fixed;
+  top: 30%;
+}
+
+.social_share.hover-right a {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  position: relative;
+  vertical-align: top;
+  width: 30px;
+}
+
+
+.social_share.hover-right a.fb {
+  background: none repeat scroll 0 0 #3A589B;
+}
+
+
+.social_share.hover-right a.gplus {
+  background: none repeat scroll 0 0 #DA4735;
+}
+.social_share.hover-right a.twitter {
+  background: none repeat scroll 0 0 #33b1cb;
+}
+.social_share.hover-right a.linkedin {
+  background: none repeat scroll 0 0 #1183a6;
+}
+.social_share.hover-right a.pinterest {
+  background: none repeat scroll 0 0 #CB2028;
+}
+.social_share.hover-right a.reddit {
+  background: none repeat scroll 0 0 #7ccbff;
+}
+
+
+.social_share.hover-right span.count {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+  color: #FFFFFF;
+  visibility:hidden;
+  font-size: 10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  transition: all 1s ease 0s;
+  width: 30px;
+}
+
+.social_share.hover-right a:hover > span.count{
+	visibility:visible;
+	top: -15px;
+	}
+
+
+
+/* ******************************************** */
+
+
+
+.admin_social_set .social_share > a {
+  margin: 0 5px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+

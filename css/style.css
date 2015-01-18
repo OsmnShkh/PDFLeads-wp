@@ -1,0 +1,228 @@
+body {
+	background-color: #CCCCCC;
+	margin: 0!important;
+	padding: 0!important;
+	font-family: Arial;
+}
+
+.error {
+	color: red!important;
+	text-align: center;
+}
+
+#pdf_document_wrap {
+	margin: 0 auto;
+}
+
+#pdf_document_wrap.d_top_bar {
+	margin-top: 50px;
+}
+#pdf_document_wrap.d_bot_bar {
+	margin-bottom: 50px;
+}
+.pdf_page_bar {
+	position: fixed;
+	width: 100%!important;
+	background: #fff;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.pdf_page_bar.top_bar {
+	top: 0;
+	border-bottom: 1px solid #C3C3C3;
+}
+.pdf_page_bar.top_bar.logged {
+	top: 32px;
+}
+.pdf_page_bar.bot_bar {
+	bottom: 0;
+	border-top: 1px solid #C3C3C3;
+}
+.pdf_page_bar > div {
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
+}
+.loaded_pdf {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	margin-top: 5px;
+}
+.btn,.bar_form input[type="submit"] {
+	display: inline-block;
+	padding: 7px 22px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	border: 1px solid #cccccc;
+	border-color:  #bfbfbf;
+	border-radius: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+	font-weight: bold;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+ opacity: 0.9;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+
+.bar_form input[type="submit"] {
+  color: #ffffff;
+  background-color: #006dcc;
+  border-color: #0044cc;
+}
+
+.bar_form input[type="submit"]:hover {
+  color: #ffffff;
+  background-color: #0044cc;
+  background-image: none;
+}
+
+.btn-warning {
+  color: #ffffff;
+  background-color: #faa732;
+  border-color: #f89406;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  color: #ffffff;
+  background-color: #f89406;
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605;
+}
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #da4f49;
+  border-color: #bd362f;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  color: #ffffff;
+  background-color: #bd362f;
+}
+
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #942a25;
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #5bb75b;
+  border-color: #51a351;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  color: #ffffff;
+  background-color: #51a351;
+  *background-color: #499249;
+}
+
+.btn-success:active,
+.btn-success.active {
+  background-color: #408140 \9;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #49afcd;
+  border-color: #2f96b4;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #24748c \9;
+}
+.bar_form form {
+	margin: 0;padding: 0;
+}
+.bar_form input {
+	margin: 0 5px;
+	padding: 2px;
+}
+
+.extend_buttons a{
+	text-decoration: none;
+}
+
+@media ( max-width: 782px ) {
+	body .pdf_page_bar.top_bar.logged {
+		top: 46px;
+	}
+	
+	body .btn, body .bar_form input[type="submit"] {
+		padding: 3px 10px;
+		font-size: 10px;
+	}
+	body .bar_text span {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+	body .pdf_page_bar.top_bar.logged {
+		top: 0;
+	}
+}
+.share-container {
+	width: 100%;
+}
+.share-container .rrssb-buttons{float:left;width:calc(100% - 116px)}
