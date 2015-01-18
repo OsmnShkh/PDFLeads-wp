@@ -1,5 +1,5 @@
 <div class="wrap">
-<h2><?php echo ($action =='add_pdfpage') ? "Add PDF Page" : "Edit PDF Page" ?></h2>
+<h2><?php echo ($action =='add_pdfpage') ? "Add PDF Lead Page" : "Edit PDF Lead Page" ?></h2>
 <?php if(isset($_GET['error'])) : ?>
 	<p style="color:red"><?php echo $_GET['error']; ?></p>
 
@@ -9,6 +9,7 @@
 <input type="hidden" name="action" value="<?php echo $action;?>">
 <input type="hidden" name="id" value="<?php echo $id; ?>">
 <table class="form-table">
+	<h2>Content</h2>
 	<tbody>
 		<tr valign="top">
 			<th scope="row">
@@ -47,6 +48,14 @@
 				</fieldset>
 			</td>
 		</tr>
+		<tr valign="top">
+			<th scope="row">
+				<label for="pdf_file">Bar Color</label>
+			</th>
+			<td>
+				<input type="text"  value="<?php echo ($bar_color) ? $bar_color : "#ffffff"?>" name="bar_color" class="color-field" data-default-color="#ffffff" />
+			</td>
+		</tr>
 		<th scope="row">Add "noindex"</th>
 			<td>
 				<fieldset>
@@ -61,69 +70,34 @@
 		</tr>
 	</tbody>
 </table>
-<h2>Social Sharing</h2>
+
+<h2>Messaging</h2>
 <table class="form-table admin_social_set">
 	<tbody>
-		<tr valign="top">
-			<th scope="row">
-				<label for="pdf_file">Choose Social Buttons</label>
-			</th>
-			<td>
-				<div class="social social_share flat">
-					<a class="fb" href="#">
-						<span class="icon"></span>
-						<input type="checkbox" name="fb" <?php echo ($social && $social['fb']) ? 'checked="checked"': '' ?>>
-					</a>
 
-					<a class="gplus" href="#">
-						<span class="icon"></span>
-						<input type="checkbox" name="gplus" <?php echo ($social && $social['gplus']) ? 'checked="checked"': '' ?>>
-					</a>
-					<a class="twitter" href="#">
-						<span class="icon"></span>
-						<input type="checkbox" name="twitter" <?php echo ($social && $social['twitter']) ? 'checked="checked"': '' ?>>
-					</a>
-					<a class="linkedin" href="#">
-						<span class="icon"></span>
-						<input type="checkbox" name="linkedin" <?php echo ($social && $social['linkedin']) ? 'checked="checked"': '' ?>>
-					</a>
-					<a class="reddit" href="#">
-						<span class="icon"></span>
-						<input type="checkbox" name="reddit" <?php echo ($social && $social['reddit']) ? 'checked="checked"': '' ?>>
-					</a>
-				</div>
+		<tr valign="top">
+			<th scope="row">
+				<label for="bar_text">Bar Text</label>
+			</th>
+			<td>
+				<input type="text" name="bar_text" value="<?php echo $bar_text; ?>"><br>
+				<p class="description">
+					Put text on  it's own line <input type="checkbox" value="1" name="textline" <?php echo ($textline) ? 'checked="checked"': '' ?>>
+				</p>
 			</td>
 		</tr>
 		<tr valign="top">
 			<th scope="row">
-				<label for="pdf_file">Shared Link</label>
+				<label for="text_color">Text Color</label>
 			</th>
 			<td>
-				<input type="text" name="sh_link" value="<?php echo $sh_link; ?>">
-				<p class="description">Leave blank to use the default url.</p>
-			</td>
-		</tr>
-		<tr valign="top">
-			<th scope="row">
-				<label for="pdf_file">Shared Text</label>
-			</th>
-			<td>
-				<textarea name="sh_text" style="width: 300px;height: 100px;"><?php echo $sh_text; ?></textarea>
-			</td>
-		</tr>
-		<tr valign="top">
-			<th scope="row">
-				<label for="pdf_file">Twitter account name</label>
-			</th>
-			<td>
-				<input name="twitter_account" type="text"  value="<?php echo get_option('twitter_author');?>">
-				<input type="button" name="submit" id="save_author" class="button button-secondary" value="Save">
-				<p class="description">One for all pages.</p>
+				<input type="text" value="<?php echo ($text_color) ? $text_color : "#000000"?>" name="text_color" class="color-field" data-default-color="#000000" />
 			</td>
 		</tr>
 	</tbody>
 </table>
-<h2>CTA Buttons</h2>
+
+<h2>Buttons</h2>
 <table class="form-table admin_social_set">
 	<tbody>
 		<tr valign="top">
@@ -193,38 +167,72 @@
 		</tr>
 	</tbody>
 </table>
-<h2>Extend Options</h2>
+
+
+<h2>Social Sharing</h2>
 <table class="form-table admin_social_set">
 	<tbody>
 		<tr valign="top">
 			<th scope="row">
-				<label for="pdf_file">Bar Color</label>
+				<label for="pdf_file">Choose Social Buttons</label>
 			</th>
 			<td>
-				<input type="text"  value="<?php echo ($bar_color) ? $bar_color : "#ffffff"?>" name="bar_color" class="color-field" data-default-color="#ffffff" />
+				<div class="social social_share flat">
+					<a class="fb" href="#">
+						<span class="icon"></span>
+						<input type="checkbox" name="fb" <?php echo ($social && $social['fb']) ? 'checked="checked"': '' ?>>
+					</a>
+
+					<a class="gplus" href="#">
+						<span class="icon"></span>
+						<input type="checkbox" name="gplus" <?php echo ($social && $social['gplus']) ? 'checked="checked"': '' ?>>
+					</a>
+					<a class="twitter" href="#">
+						<span class="icon"></span>
+						<input type="checkbox" name="twitter" <?php echo ($social && $social['twitter']) ? 'checked="checked"': '' ?>>
+					</a>
+					<a class="linkedin" href="#">
+						<span class="icon"></span>
+						<input type="checkbox" name="linkedin" <?php echo ($social && $social['linkedin']) ? 'checked="checked"': '' ?>>
+					</a>
+					<a class="reddit" href="#">
+						<span class="icon"></span>
+						<input type="checkbox" name="reddit" <?php echo ($social && $social['reddit']) ? 'checked="checked"': '' ?>>
+					</a>
+				</div>
 			</td>
 		</tr>
 		<tr valign="top">
 			<th scope="row">
-				<label for="bar_text">Bar Text</label>
+				<label for="pdf_file">Shared Link</label>
 			</th>
 			<td>
-				<input type="text" name="bar_text" value="<?php echo $bar_text; ?>"><br>
-				<p class="description">
-					Put text on  it's own line <input type="checkbox" value="1" name="textline" <?php echo ($textline) ? 'checked="checked"': '' ?>>
-				</p>
+				<input type="text" name="sh_link" value="<?php echo $sh_link; ?>">
+				<p class="description">Leave blank to use the default url.</p>
 			</td>
 		</tr>
 		<tr valign="top">
 			<th scope="row">
-				<label for="text_color">Text Color</label>
+				<label for="pdf_file">Shared Text</label>
 			</th>
 			<td>
-				<input type="text" value="<?php echo ($text_color) ? $text_color : "#000000"?>" name="text_color" class="color-field" data-default-color="#000000" />
+				<textarea name="sh_text" style="width: 300px;height: 100px;"><?php echo $sh_text; ?></textarea>
+			</td>
+		</tr>
+		<tr valign="top">
+			<th scope="row">
+				<label for="pdf_file">Twitter account name</label>
+			</th>
+			<td>
+				<input name="twitter_account" type="text"  value="<?php echo get_option('twitter_author');?>">
+				<input type="button" name="submit" id="save_author" class="button button-secondary" value="Save">
+				<p class="description">One for all pages.</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
+
+
 
 <h2>Add Form To Bar <input type="checkbox" name="form" class="button_enable" <?php echo ($form) ? 'checked="checked"': '' ?>></h2>
 <table class="form-table admin_social_set">
