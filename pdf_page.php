@@ -202,8 +202,8 @@ class PDFpage {
 	}
 
 	public function add_admin_menu() {
-		add_menu_page('PDF List', 'PDF Bar', 'read', 'pdf-bar-list', array(&$this, 'get_page_list'),'dashicons-media-code',11);
-		add_submenu_page( 'pdf-bar-list', 'Add PDF page', 'Add New', 'read', 'pdf-bar-add', array(&$this, 'add_pdf_page'));
+		add_menu_page('PDF List', 'PDFLeads', 'read', 'pdf-bar-list', array(&$this, 'get_page_list'),'dashicons-media-text',11);
+		add_submenu_page( 'pdf-bar-list', 'Add PDF lead page', 'Add New', 'read', 'pdf-bar-add', array(&$this, 'add_pdf_page'));
 	}
 
 	//Admin page pdf-bar-list

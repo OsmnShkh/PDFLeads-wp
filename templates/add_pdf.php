@@ -13,7 +13,7 @@
 	<tbody>
 		<tr valign="top">
 			<th scope="row">
-				<label for="pdf_file">Pdf File(*)</label>
+				<label for="pdf_file">PDF File(*)</label>
 			</th>
 			<td>
 				<?php if($pdf_url): ?>
@@ -65,6 +65,7 @@
 					<p>
 						<input type="checkbox" value="1" name="noindex" <?php echo ($noindex) ? 'checked="checked"': '' ?>>
 					</p>
+					<p class="description">Make this page invisible to most search engines.</p>
 				</fieldset>
 			</td>
 		</tr>
@@ -81,6 +82,8 @@
 			</th>
 			<td>
 				<input type="text" name="bar_text" value="<?php echo $bar_text; ?>"><br>
+				<p class="description" style-"width: 40%">Add a call to action line here like “Sign up for a free trial or subscribe to our newsletter”.
+</p>
 				<p class="description">
 					Put text on  it's own line <input type="checkbox" value="1" name="textline" <?php echo ($textline) ? 'checked="checked"': '' ?>>
 				</p>
@@ -208,7 +211,7 @@
 			</th>
 			<td>
 				<input type="text" name="sh_link" value="<?php echo $sh_link; ?>">
-				<p class="description">Leave blank to use the default url.</p>
+				<p class="description">Use a landing page url for opt-in content or leave blank to use the PDF page.</p>
 			</td>
 		</tr>
 		<tr valign="top">
@@ -221,12 +224,12 @@
 		</tr>
 		<tr valign="top">
 			<th scope="row">
-				<label for="pdf_file">Twitter account name</label>
+				<label for="pdf_file">Twitter Username</label>
 			</th>
 			<td>
 				<input name="twitter_account" type="text"  value="<?php echo get_option('twitter_author');?>">
 				<input type="button" name="submit" id="save_author" class="button button-secondary" value="Save">
-				<p class="description">One for all pages.</p>
+				<p class="description">Same for all PDF lead pages.</p>
 			</td>
 		</tr>
 	</tbody>
