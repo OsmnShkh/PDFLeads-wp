@@ -53,11 +53,6 @@
 			<?php echo stripslashes_deep($page_data->form) ?>
 		</div>
 		<?php endif; ?>
-		<?php if($share->isButtons()) : ?>
-		<div class="share-container" <?php echo $share->getButtonsWidth() ?> >
-			<?php echo $share->getButtons()?>
-		</div>
-		<?php endif; ?>
 		<?php if(!empty($page_data->button_1_link ) || !empty($page_data->button_2_link )) : ?>
 		<div class="extend_buttons">
 			<?php if(!empty($page_data->button_1_link )) : ?>
@@ -68,6 +63,12 @@
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
+		<?php if($share->isButtons()) : ?>
+		<div class="share-container" <?php echo $share->getButtonsWidth() ?> >
+			<?php echo $share->getButtons()?>
+		</div>
+		<?php endif; ?>
+
 	</div>
 	<div id="pdf_document_wrap" class="<?php echo $document_class?>">
 		<div id="viewerContainer">
