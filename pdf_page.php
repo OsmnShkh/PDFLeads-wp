@@ -12,7 +12,7 @@ License:
 */
 
 require_once('wp-updates-plugin.php');
-new WPUpdatesPluginUpdater_853( 'http://wp-updates.com/api/2/plugin', pdf_pages;
+new WPUpdatesPluginUpdater_854( 'http://wp-updates.com/api/2/plugin', plugin_basename(__FILE__));
 
 require('inc/table.class.php');
 
