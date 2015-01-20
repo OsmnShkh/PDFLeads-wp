@@ -44,6 +44,10 @@
 	<?php  wp_footer();  ?>
 	<div class="<?php echo $barClass;?>" style="background: <?php echo $page_data->bar_color ?>">
 		<?php if($page_data->bar_text) : ?>
+		<div class="pdfleads-logo">
+
+  <a target="_blank" href="http://pdfleads.com"> <img src="http://smitpatel.com/wp-content/uploads/2015/01/pdfleads-logo-letter.png"></a>
+</div>
 		<div class="bar_text" <?php echo ($page_data->textline) ? 'style="width:100%;margin: 5px 0px;"' : ""?>>
 			<span style="color:<?php echo $page_data->text_color ?>" ><?php echo $page_data->bar_text ?></span>
 		</div>
