@@ -12,7 +12,6 @@ License:
 */
 
 
-
 require('inc/table.class.php');
 
 class PDFpage {
