@@ -96,12 +96,12 @@ body {
 .bar_form input[type="submit"] {
   color: #ffffff;
   background-color: #006dcc;
-  border-color: #0044cc;
+
 }
 
 .bar_form input[type="submit"]:hover {
   color: #ffffff;
-  background-color: #0044cc;
+
   background-image: none;
 }
 
@@ -192,6 +192,11 @@ body {
 }
 .bar_form form {
 	margin: 0;padding: 0;
+    margin-top: 3px;
+    vertical-align: middle;
+font-weight: 500;
+color: black;
+
 }
 .bar_form input {
 	margin: 0 5px;

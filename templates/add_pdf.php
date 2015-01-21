@@ -30,8 +30,10 @@
 			<th scope="row">
 				<label for="pdf_file">Title(*)</label>
 			</th>
+
 			<td>
 				<input type="text" name="title" value="<?php echo $title; ?>">
+				<p class="description">The title is also used as the page url.</p>
 			</td>
 		</tr>
 		<tr>
@@ -123,8 +125,10 @@
 			<th scope="row">
 				<label for="pdf_file">Button Link(*)</label>
 			</th>
+
 			<td>
 				<input type="text" name="button_1_link" value="<?php echo $button_1_link; ?>" disabled="disabled">
+				<p class="description">Use UTM tags to track leads from this page. </p>
 			</td>
 		</tr>
 		<tr valign="top" class="button_1_tr">
@@ -157,6 +161,7 @@
 			</th>
 			<td>
 				<input type="text" name="button_2_link" value="<?php echo $button_2_link; ?>" disabled="disabled">
+				<p class="description">Use UTM tags to track leads from this page. </p>
 			</td>
 		</tr>
 		<tr valign="top" class="button_2_tr">
